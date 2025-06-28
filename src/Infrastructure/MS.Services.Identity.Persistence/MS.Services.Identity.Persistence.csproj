@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj" />
     <ProjectReference Include="..\..\Core\MS.Services.Identity.Application\MS.Services.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\Core\MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj" />
   </ItemGroup>
 
 </Project>

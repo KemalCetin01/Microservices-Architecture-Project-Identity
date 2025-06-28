@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.DbMigrations", "src\Core\MS.Services.Identity.DbMigrations\MS.Services.Identity.DbMigrations.csproj", "{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Domain", "MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj", "{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Infrastructure", "src\Infrastructure\MS.Services.Identity.Infrastructure\MS.Services.Identity.Infrastructure.csproj", "{03242FE1-72D5-4ED2-B06D-6BD9185732F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Persistence", "src\Infrastructure\MS.Services.Identity.Persistence\MS.Services.Identity.Persistence.csproj", "{38F8C4F3-A058-456A-9BE2-1636DDBEF47F}"
@@ -36,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{8AB868
 		..\MS Project Nugets\MS.Services.Core.Logging.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Logging.1.0.0.nupkg
 		..\MS Project Nugets\MS.Services.Core.Networking.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Networking.1.0.0.nupkg
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Domain", "src\Core\MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj", "{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,6 @@ Global
 		{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03242FE1-72D5-4ED2-B06D-6BD9185732F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03242FE1-72D5-4ED2-B06D-6BD9185732F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03242FE1-72D5-4ED2-B06D-6BD9185732F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +63,10 @@ Global
 		{38F8C4F3-A058-456A-9BE2-1636DDBEF47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F8C4F3-A058-456A-9BE2-1636DDBEF47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F8C4F3-A058-456A-9BE2-1636DDBEF47F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,9 +78,9 @@ Global
 		{2190F2D6-5267-4B68-9EB0-BD08D19BA2F5} = {8326F9C4-7C93-43D8-AD83-CE407A382812}
 		{8D571829-89BD-4917-8386-BC37CB113D40} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
 		{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
-		{A3ED840C-B2AF-4FCD-9D45-A02D6ECD156C} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
 		{03242FE1-72D5-4ED2-B06D-6BD9185732F4} = {AC51144F-4909-4EBD-908B-6DADE45E43C2}
 		{38F8C4F3-A058-456A-9BE2-1636DDBEF47F} = {AC51144F-4909-4EBD-908B-6DADE45E43C2}
 		{8AB8686A-7A43-4034-AE9B-B174107953E7} = {C9A27BA6-F0B0-4655-BD55-1CC0A7BC16E3}
+		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
 	EndGlobalSection
 EndGlobal
