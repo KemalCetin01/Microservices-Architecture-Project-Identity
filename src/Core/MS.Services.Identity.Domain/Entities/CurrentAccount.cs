@@ -26,9 +26,7 @@ namespace MS.Services.Identity.Domain.Entities
         public string? CompanyType { get; set; } // Firma Tipi
         public string? Maturity { get; set; } // Vade
         public bool IsSaleExchangeRate { get; set; }
-        public ICollection<CurrentAccountNote>? CurrentAccountNotes { get; set; }
         public Guid? BusinessId { get; set; }
-        public Business Business { get; set; } = null!;
 
     }
 }

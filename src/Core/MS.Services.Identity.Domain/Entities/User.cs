@@ -18,10 +18,6 @@ public class User : BaseSoftDeleteEntity
 
     public int? UserTypeId { get; set; }
     public UserType? UserType { get; set; }
-    public ICollection<UserNote>? Notes { get; set; }
     public UserTypeEnum UserTypeEnum =>(UserTypeEnum)UserTypeId;
-
-    public ICollection<UserShippingAddress>? UserShippingAddresses { get; set; }
-    public ICollection<UserBillingAddress>? UserBillingAddresses { get; set; }
 
 }

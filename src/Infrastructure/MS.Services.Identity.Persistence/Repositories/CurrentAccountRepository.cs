@@ -60,10 +60,6 @@ public class CurrentAccountRepository : Repository<CurrentAccount, IdentityDbCon
     public async Task<SearchListModel<CurrentAccount>> GetGeneralCurrentAsync(SearchQueryModel<GetAllGeneralCurrentAccountsQueryFilterModel> searchQuery, CancellationToken cancellationToken  )
     {
         var query = Queryable()
-           .Include(x => x.Business)
-           .ThenInclude(x => x.BusinessUsers)
-           .ThenInclude(x => x.UserB2B)
-           .Include(x=>x.CurrentAccountNotes).ThenInclude(x => x.Note)
            .Where(x => !x.IsDeleted)
            .Select(x => new CurrentAccount
            {

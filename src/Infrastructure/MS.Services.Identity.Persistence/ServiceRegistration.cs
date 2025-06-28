@@ -22,32 +22,13 @@ public static class ServiceRegistrations
         serviceCollection.AddScoped<IIdentityUnitOfWork, IdentityUnitOfWork>();
         serviceCollection.AddScoped<IUserRepository, UserRepository>();
         serviceCollection.AddScoped<ICurrentAccountRepository, CurrentAccountRepository>();
-        serviceCollection.AddScoped<IActivityAreaRepository, ActivityAreaRepository>();
-        serviceCollection.AddScoped<IBusinessRepository, BusinessRepository>();
-        serviceCollection.AddScoped<IBusinessBillingAddressRepository, BusinessBillingAddressRepository>();
-        serviceCollection.AddScoped<INoteRepository, NotesRepository>();
-        serviceCollection.AddScoped<IBusinessUserRepository, BusinessUserRepository>();
-        serviceCollection.AddScoped<IEmployeeManagerRepository, UserEmployeeManagerRepository>();
         serviceCollection.AddScoped<IUserEmployeeRepository, UserEmployeeRepository>();
         serviceCollection.AddScoped<IEmployeeRoleRepository, EmployeeRoleRepository>();
-        serviceCollection.AddScoped<IAddressLocationRepository, AddressLocationRepository>();
-        serviceCollection.AddScoped<IUserBillingAddressRepository, UserBillingAddressRepository>();
-        serviceCollection.AddScoped<IUserShippingAddressRepository, UserShippingAddressRepository>();
-        serviceCollection.AddScoped<IUserB2BRepository, UserB2BRepository>();
-        serviceCollection.AddScoped<IUserB2CRepository, UserB2CRepository>();
-        serviceCollection.AddScoped<IUserNoteRepository, UserNoteRepository>();
-        serviceCollection.AddScoped<ICurrentAccountNoteRepository, CurrentAccountNoteRepository>();
-        serviceCollection.AddScoped<IBusinessNoteRepository, BusinessNoteRepository>();
-        serviceCollection.AddScoped<IPositionRepository, PositionRepository>();
-        serviceCollection.AddScoped<IOccupationRepository, OccupationRepository>();
         serviceCollection.AddScoped<ISectorRepository, SectorRepository>();
-        serviceCollection.AddScoped<INumberOfEmployeeRepository, NumberOfEmployeeRepository>();
         serviceCollection.AddScoped<IIdentityIdSequenceRepository, IdentityIdSequenceRepository>();
         serviceCollection.AddScoped<IUserOTPRepository, UserOTPRepository>();
         serviceCollection.AddScoped<IUserResetPasswordRepository, UserResetPasswordRepository>();
         serviceCollection.AddScoped<IUserConfirmRegisterTypeRepository, UserConfirmRegisterTypeRepository>();
-        serviceCollection.AddScoped<IDocumentRepository, DocumentRepository>();
-        serviceCollection.AddScoped<IDocumentRelationRepository, DocumentRelationRepository>();
 
 
     }

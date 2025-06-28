@@ -21,16 +21,13 @@ public sealed class CreateB2BUserCommandHandler : BaseCommandHandler<CreateB2BUs
 {
     private readonly IUserB2BService _userB2BService;
     private readonly ISectorService _sectorService;
-    private readonly IActivityAreaService _activityAreaService;
     private readonly IUserEmployeeService _userEmployeeService;
     public CreateB2BUserCommandHandler(IUserB2BService userB2BService,
                                        ISectorService sectorService,
-                                       IActivityAreaService activityAreaService,
                                        IUserEmployeeService userEmployeeService)
     {
         _userB2BService = userB2BService;
         _sectorService = sectorService;
-        _activityAreaService = activityAreaService;
         _userEmployeeService = userEmployeeService;
     }
 
@@ -40,8 +37,7 @@ public sealed class CreateB2BUserCommandHandler : BaseCommandHandler<CreateB2BUs
             await _userEmployeeService.GetByIdAsync(request.RepresentativeId.Value, cancellationToken);
         if (request.SectorId.HasValue)
             await _sectorService.GetByIdAsync(request.SectorId.Value, cancellationToken);
-         if (request.ActivityAreaId.HasValue)
-            await _activityAreaService.GetByIdAsync(request.ActivityAreaId.Value, cancellationToken);
+       
    
         return await _userB2BService.CreateAsync(request, cancellationToken);
     }

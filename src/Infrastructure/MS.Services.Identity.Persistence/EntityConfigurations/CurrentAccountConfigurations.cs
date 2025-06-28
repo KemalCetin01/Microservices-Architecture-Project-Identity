@@ -10,9 +10,5 @@ public class CurrentAccountConfigurations : IEntityTypeConfiguration<CurrentAcco
         builder.Property(x => x.SalesAndDistribution).HasComment("1:Açık - 0:Kapalı");
         builder.Property(x => x.CurrentAccountType).HasComment("1:Alıcı - 2:Satıcı - 3:Alıcı Ve Satıcı");
 
-        builder.HasOne(x => x.Business)
-            .WithMany(x => x.CurrentAccounts)
-            .IsRequired(false)
-            .HasForeignKey(x => x.BusinessId);
     }
 }

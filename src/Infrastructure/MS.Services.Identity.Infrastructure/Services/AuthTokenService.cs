@@ -1,15 +1,8 @@
 ﻿
+using MS.Services.Identity.Application.Core.Infrastructure.Services;
+using MS.Services.Identity.Infrastructure.Clients.Keycloak.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json;
-using AutoMapper;
-using MS.Services.Core.ExceptionHandling.Exceptions;
-using MS.Services.Identity.Application.Core.Infrastructure.Services;
-using MS.Services.Identity.Application.Core.Persistence.Repositories;
-using MS.Services.Identity.Application.Core.Persistence.UoW;
-using MS.Services.Identity.Application.DTOs.AddressLocation.Request;
-using MS.Services.Identity.Application.DTOs.AddressLocation.Response;
-using MS.Services.Identity.Domain.Entities;
-using MS.Services.Identity.Infrastructure.Clients.Keycloak.Models;
 
 namespace MS.Services.Identity.Infrastructure.Services.Addresses;
 

@@ -18,7 +18,6 @@ public interface IKeycloakRoleService : IScopedService
     Task<KeycloackDataResponse<bool>> AddAssociatedRoleAsync(string realm, string roleId, IEnumerable<RoleRepresentation> roleRepresentations, CancellationToken cancellationToken);
     Task<KeycloackDataResponse<bool>> DeleteAssociatedRoleAsync(string realm, string roleName, IEnumerable<RoleRepresentation> roleRepresentations, CancellationToken cancellationToken);
     Task<bool> SetRolePermissions(string realm, string roleName, List<string>? permissionIds, CancellationToken cancellationToken);
-    Task<KeycloackDataResponse<bool>> SetGroupRolePermissions(SetGroupPermissionsCommandDTO request, string realm, CancellationToken cancellationToken);
     Task<List<ClientPermissionModel>> GetGroupRolePermissions(string groupId, string realm, string clientName, CancellationToken cancellationToken);
     Task<List<ClientPermissionModel>> GetChildGroupRolePermissions(string parentGroupId, string childGroupId, string realm, string clientName, CancellationToken cancellationToken);
     Task MigrationClientRoles(KeycloakMigrateClientRolesCommand keycloakMigrateClientRolesCommand, CancellationToken cancellationToken);

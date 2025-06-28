@@ -3,7 +3,7 @@
 public class KeycloakOptions
 {
     public string master_realm { get; set; } = null!;
-    public string ozdisan_realm { get; set; } = null!;
+    public string microservice_realm { get; set; } = null!;
     public string ecommerce_b2b_realm { get; set; } = null!;
     public string ecommerce_b2c_realm { get; set; } = null!;
     public string grant_type { get; set; } = null!;

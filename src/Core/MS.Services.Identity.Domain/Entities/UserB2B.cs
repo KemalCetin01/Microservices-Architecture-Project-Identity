@@ -1,5 +1,5 @@
-﻿using MS.Services.Identity.Domain.Enums;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using MS.Services.Identity.Domain.Entities;
+using MS.Services.Identity.Domain.Enums;
 
 namespace MS.Services.Identity.Domain.Entities;
 
@@ -17,12 +17,9 @@ public class UserB2B : IEntity,ISoftDeleteEntity
     public int? SectorId { get; set; }
     public Sector? Sector { get; set; }
     public int? ActivityAreaId { get; set; }
-    public ActivityArea? ActivityArea { get; set; }
     public SiteStatusEnum SiteStatus { get; set; }
     public UserStatusEnum UserStatus { get; set; }
     public Guid? UserGroupRoleId { get; set; }
-    public ICollection<BusinessUser>? BusinessUsers { get; set; }
-    public ICollection<Business>? Businesses { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime? DeletedDate { get; set; }
     public Guid? DeletedBy { get; set; }

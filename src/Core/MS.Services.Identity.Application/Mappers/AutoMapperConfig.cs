@@ -75,39 +75,17 @@ public class AutoMapperConfig : Profile
 
         CreateMap<CreateB2CUserCommandDTO, User>().ReverseMap();
 
-        CreateMap<CreateB2CUserCommandDTO, UserB2C>()
-             .ForMember(dest => dest.UserEmployeeId, opt => opt.MapFrom(src => src.RepresentativeId));
-        CreateMap<UserB2C, CreateB2CUserCommandDTO>()
-           .ForMember(dest => dest.RepresentativeId, opt => opt.MapFrom(src => src.UserEmployeeId));
-
 
         CreateMap<UpdateB2CUserCommandDTO, User>().ReverseMap();
-
-        CreateMap<UpdateB2CUserCommandDTO, UserB2C>()
-            .ForMember(dest => dest.UserEmployeeId, opt => opt.MapFrom(src => src.RepresentativeId));
-        CreateMap<UserB2C, UpdateB2CUserCommandDTO>()
-           .ForMember(dest => dest.RepresentativeId, opt => opt.MapFrom(src => src.UserEmployeeId));
 
 
         CreateMap<B2BUserGetByIdDTO, UserB2B>().ReverseMap()
             .ForMember(dest => dest.RepresentativeId, opt => opt.MapFrom(src => src.UserEmployeeId))
-            .ForMember(dest => dest.BusinessId, opt => opt.MapFrom(src => src.BusinessUsers.FirstOrDefault().BusinessId))
-            .ForMember(dest => dest.BusinessCode, opt => opt.MapFrom(src => src.BusinessUsers.FirstOrDefault()!.Business.Code))
-            .ForMember(dest => dest.BusinessReviewStatus, opt => opt.MapFrom(src => src.BusinessUsers.FirstOrDefault()!.Business.ReviewStatus))
-            .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.User.FirstName))
+             .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.User.FirstName))
             .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.User.LastName))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.User.Email))
             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.User.Id))
             .ForMember(dest => dest.IdentityRefId, opt => opt.MapFrom(src => src.User.IdentityRefId));
-
-
-        CreateMap<B2CUserGetByIdDTO, UserB2C>().ReverseMap()
-            .ForMember(dest => dest.RepresentativeId, opt => opt.MapFrom(src => src.UserEmployeeId))
-            .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.User.FirstName))
-            .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => src.User.CreatedDate))
-            .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.User.LastName))
-            .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.User.Email))
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.User.Id));
 
         CreateMap<UserQueryFilter, UserB2CQueryServiceFilter>().ReverseMap();
         CreateMap<UserQueryFilter, UserB2BQueryServiceFilter>().ReverseMap();
@@ -158,9 +136,5 @@ public class AutoMapperConfig : Profile
             .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Id))
             .ForMember(dest => dest.Label, opt => opt.MapFrom(src => src.Name));
 
-        CreateMap<UserOTP, UserB2C>().ReverseMap()
-            .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.User.Id))
-            .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => (src.PhoneCountryCode + src.Phone)));
-      
-    }
+        }
 }

@@ -42,19 +42,4 @@ public static class QueryableSortExtensions
         };
     }
 
-    public static IQueryable<Business> SortByModel(this IQueryable<Business> query, SortModel? sortModel)
-    {
-        return sortModel switch
-        {
-            _ when sortModel == null =>
-                query.OrderByDescending(x => x.CreatedDate),
-            _ when sortModel.Field.Equals(nameof(Business.Name), StringComparison.InvariantCultureIgnoreCase) =>
-                query.OrderByDirection(x => x.Name, sortModel.Direction),
-            _ when sortModel.Field.Equals(nameof(Business.Code), StringComparison.InvariantCultureIgnoreCase) =>
-                query.OrderByDirection(x => x.Code, sortModel.Direction),
-            _ when sortModel.Field.Equals(nameof(Business.DiscountRate), StringComparison.InvariantCultureIgnoreCase) =>
-                query.OrderByDirection(x => x.DiscountRate, sortModel.Direction),
-            _ => query
-        };
-    }
 }

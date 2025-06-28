@@ -16,15 +16,13 @@ public class GetB2BUserPermissionsQuery : IQuery<GetB2BUserRoleAndPermissionsRes
 }
 public sealed class GetB2BUserPermissionsQueryueryHandler : BaseQueryHandler<GetB2BUserPermissionsQuery, GetB2BUserRoleAndPermissionsResponseDto>
 {
-    protected readonly IIdentityB2BService _identityB2BService;
     protected readonly IUserB2BService _userB2BService;
     private readonly KeycloakOptions _keycloakOptions;
 
-    public GetB2BUserPermissionsQueryueryHandler(IUserB2BService userB2BService, IIdentityB2BService identityB2BService,
+    public GetB2BUserPermissionsQueryueryHandler(IUserB2BService userB2BService,
         IOptions<KeycloakOptions> options)
     {
         _userB2BService = userB2BService;
-        _identityB2BService = identityB2BService;
         _keycloakOptions = options.Value;
     }
 
@@ -33,8 +31,9 @@ public sealed class GetB2BUserPermissionsQueryueryHandler : BaseQueryHandler<Get
         var userDetail = await _userB2BService.GetByIdAsync(request.Id, cancellationToken);
         if (userDetail == null)
             throw new ResourceNotFoundException(B2BUserConstants.RecordNotFound);
-      
-        var response = await _identityB2BService.GetB2BUserRoleAndPermissions(userDetail.IdentityRefId, cancellationToken);
-        return response;
+
+        //  var response = await _identityB2BService.GetB2BUserRoleAndPermissions(userDetail.IdentityRefId, cancellationToken);
+        // return response;
+        return null;
     }
 }

@@ -32,7 +32,7 @@ public class IdentityKeycloakEmployeeService : IdentityKeycloakBaseService, IIde
         _keycloakOptions = options.Value;
     }
 
-    protected override string Realm { get => _keycloakOptions.ozdisan_realm; }
+    protected override string Realm { get => _keycloakOptions.microservice_realm; }
 
     public async Task<GetRolePermissionsResponseDto> GetRolePermissions(string roleName, CancellationToken cancellationToken)
     {

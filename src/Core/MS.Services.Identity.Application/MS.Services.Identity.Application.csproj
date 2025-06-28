@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="DTOs\Business\" />
+    <Folder Include="Handlers\B2bRoles\Queries\" />
     <Folder Include="Handlers\UserNotes\" />
   </ItemGroup>
 
