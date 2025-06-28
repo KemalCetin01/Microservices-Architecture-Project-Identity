@@ -25,4 +25,9 @@
     <ProjectReference Include="..\MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Business\" />
+    <Folder Include="Handlers\UserNotes\" />
+  </ItemGroup>
+
 </Project>

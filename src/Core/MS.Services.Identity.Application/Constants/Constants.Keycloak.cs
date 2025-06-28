@@ -5,7 +5,7 @@ public partial class Constants
     {
         public const string ecommerceClient = "client:ecommerce";
         public const string clientPrefix = "client";
-        public const string ODRefId = "ODRefId";
+        public const string ODRefId = "MSRefId";
     }
 
 }

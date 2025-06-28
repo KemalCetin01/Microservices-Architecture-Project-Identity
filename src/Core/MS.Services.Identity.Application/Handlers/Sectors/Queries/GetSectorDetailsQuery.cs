@@ -1,6 +1,4 @@
 ﻿using MS.Services.Core.Base.Handlers;
-//using MS.Services.Core.Localization.Mapping;
-//using MS.Services.Core.Localization.Services.Interfaces;
 using MS.Services.Identity.Application.Core.Infrastructure.Services;
 using MS.Services.Identity.Application.Handlers.Sectors.DTOs;
 
@@ -13,12 +11,10 @@ public class GetSectorDetailsQuery:IQuery<SectorDTO>
 public sealed class GetSectorDetailQueryHandler : BaseQueryHandler<GetSectorDetailsQuery, SectorDTO>
 {
     protected readonly ISectorService _sectorService;
-    //private readonly ILocalizationMapper _localizationMapper;
 
-    public GetSectorDetailQueryHandler(ISectorService sectorService/*, ILocalizationMapper localizationMapper*/)
+    public GetSectorDetailQueryHandler(ISectorService sectorService)
     {
         _sectorService = sectorService;
-      //  _localizationMapper = localizationMapper;
     }
 
     public override async Task<SectorDTO> Handle(GetSectorDetailsQuery request, CancellationToken cancellationToken  )

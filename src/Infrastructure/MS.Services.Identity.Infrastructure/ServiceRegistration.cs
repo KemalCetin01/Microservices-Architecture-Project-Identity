@@ -14,9 +14,6 @@ public static class ServiceRegistration
     public static void AddInfrastructureLayer(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddKeycloakServices();
-        serviceCollection.AddScoped<IIdentityB2CService, IdentityKeycloakB2CService>();
-        serviceCollection.AddScoped<IIdentityB2BService, IdentityKeycloakB2BService>();
         serviceCollection.AddScoped<IIdentityEmployeeService, IdentityKeycloakEmployeeService>();
-        serviceCollection.AddScoped<IBusinessBillingAddressService, BusinessBillingAddressService>();
     }
 }

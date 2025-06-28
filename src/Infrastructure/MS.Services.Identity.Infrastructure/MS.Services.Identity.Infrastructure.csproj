@@ -16,4 +16,8 @@
     <ProjectReference Include="..\MS.Services.Identity.Persistence\MS.Services.Identity.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
 </Project>

@@ -47,14 +47,6 @@ public partial class Constants
 
 
         public const string currentAccountName = "currentAccountName";
-        //public const string CurrentId = "currentId";
-        //public const string CurrentCode = "currentCode";
-        //public const string CompanyName = "CompanyName";
-        //public const string TransactionCurrency = "TransactionCurrency";
-        //public const string ExchangeRate = "ExchangeRate";
-        //public const string SalesAndDistribution = "SalesAndDistribution";
-        //public const string SiteStatus = "SiteStatus";
-        //public const string CurrentAccountStatus = "CurrentAccountStatus";
     }
     public class BusinessesConstants
     {
