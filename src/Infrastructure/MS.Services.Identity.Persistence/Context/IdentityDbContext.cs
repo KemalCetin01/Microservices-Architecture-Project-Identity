@@ -23,7 +23,7 @@ public class IdentityDbContext : AppDbContext
     protected DbSet<UserBillingAddress> UserBillingAddresses { get; set;} = null!;
     protected DbSet<UserShippingAddress> UserShippingAddresses { get; set;} = null!;
     protected DbSet<BusinessBillingAddress> BusinessBillingAddresses { get; set;} = null!;
-    protected DbSet<BusinessShippingAddress> BusinessShippingAddresses { get; set;} = null!;
+    protected DbSet<BusinessShippingAddress> BusinessShippingAddresses { get; set;} = null!; 
     protected DbSet<ActivityArea> ActivityAreas { get; set; } = null!;
     protected DbSet<Note> Note { get; set; } = null!;
     protected DbSet<UserNote> UserNotes { get; set; } = null!;
