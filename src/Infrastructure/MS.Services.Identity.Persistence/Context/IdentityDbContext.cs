@@ -27,7 +27,7 @@ public class IdentityDbContext : AppDbContext
     protected DbSet<ActivityArea> ActivityAreas { get; set; } = null!;
     protected DbSet<Note> Note { get; set; } = null!;
     protected DbSet<UserNote> UserNotes { get; set; } = null!;
-    protected DbSet<BusinessNote> BusinessNotes { get; set; } = null!;
+    protected DbSet<BusinessNote> BusinessNotes { get; set; } = null!; 
     protected DbSet<BusinessUser> BusinessUsers { get; set; } = null!;
     protected DbSet<CurrentAccountNote> CurrentAccountNotes { get; set; } = null!;
     protected DbSet<UserEmployeeManager> EmployeeManagers { get; set; } = null!;
