@@ -39,7 +39,7 @@ public class IdentityDbContext : AppDbContext
     public DbSet<Occupation> Occupations { get; set; } = null!;
     public DbSet<Position> Positions { get; set; } = null!;
     public DbSet<IdentityIdSequence> IdentityIdSequences { get; set; } = null!;
-    //public DbSet<LocalizationEntity> localizations { get; set; } = null!;
+    //public DbSet<LocalizationEntity> localizations { get; set; } = null!; 
     public DbSet<UserOTP> UserOTPs { get; set; } = null!;
     public DbSet<UserResetPassword> UserResetPasswords { get; set; } = null!;
     public DbSet<ConfirmRegisterType> ConfirmRegisterTypes { get; set; } = null!;
