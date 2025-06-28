@@ -1,7 +1,6 @@
 ﻿using MS.Services.Core.Data.Data.Concrete;
 using MS.Services.Core.Data.Data.Interface;
 using MS.Services.Identity.Persistence.DataSeeds;
-//using MS.Services.Core.Localization.Models;
 using MS.Services.Identity.Persistence.EntityConfigurations;
 
 namespace MS.Services.Identity.Persistence.Context;
