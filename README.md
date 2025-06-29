@@ -1,5 +1,5 @@
 CQRS + MediatR Pattern
 
-Repository Pattern
+Repository **Pattern**
 
 Unitofwork Pattern
