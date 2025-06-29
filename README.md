@@ -1,13 +1,17 @@
 
 # 🧑‍💻 Project Overview
 
-This project demonstrates a clean implementation of CQRS with MediatR in a microservices architecture. It uses well-known design patterns such as Repository and Unit of Work.
+This project demonstrates a clean implementation of CQRS with MediatR in a microservices architecture. It uses well-known Design Patterns such as CQRS+MediatR, Repository and Unit of Work.
 
 ---
 
 ## 🛠️ Used Technologies
 
 ### 🧩 Architecture & Design Patterns
+
+- ⚙️ Target Framework **.NET 9.0**  
+  The latest version of the .NET platform providing performance improvements and new features.
+
 - 🧱 **Microservices Architecture**  
   Independent services deployed separately for scalability and flexibility.
 
@@ -19,6 +23,11 @@ This project demonstrates a clean implementation of CQRS with MediatR in a micro
 
 - 🔄 **Unit of Work Pattern**  
   Manages multiple repository changes in a single transaction scope.
+
+### 🧰 Tools & Technologies
+- 🗃️ **Redis** — In-memory data store used for caching and fast key-value access  
+- 📜 **Serilog** — Structured logging for .NET applications  
+- 🧬 **MongoDB** — NoSQL database for flexible document-based data storage  
 
 ---
 
