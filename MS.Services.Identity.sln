@@ -21,20 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Persistence", "src\Infrastructure\MS.Services.Identity.Persistence\MS.Services.Identity.Persistence.csproj", "{38F8C4F3-A058-456A-9BE2-1636DDBEF47F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{8AB8686A-7A43-4034-AE9B-B174107953E7}"
-	ProjectSection(SolutionItems) = preProject
-		..\MS Project Nugets\MS.Services.Core.Base.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Base.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Base.1.0.1.nupkg = ..\MS Project Nugets\MS.Services.Core.Base.1.0.1.nupkg
-		..\MS Project Nugets\MS.Services.Core.Caching.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Caching.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Caching.Redis.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Caching.Redis.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Configuration.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Configuration.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Data.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Data.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Data.1.0.1.nupkg = ..\MS Project Nugets\MS.Services.Core.Data.1.0.1.nupkg
-		..\MS Project Nugets\MS.Services.Core.ExceptionHandling.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.ExceptionHandling.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Logging.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Logging.1.0.0.nupkg
-		..\MS Project Nugets\MS.Services.Core.Networking.1.0.0.nupkg = ..\MS Project Nugets\MS.Services.Core.Networking.1.0.0.nupkg
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Services.Identity.Domain", "src\Core\MS.Services.Identity.Domain\MS.Services.Identity.Domain.csproj", "{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4}"
 EndProject
 Global
@@ -80,7 +66,6 @@ Global
 		{DA319B37-2AB9-472C-A7EC-F81D10B5FD0D} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
 		{03242FE1-72D5-4ED2-B06D-6BD9185732F4} = {AC51144F-4909-4EBD-908B-6DADE45E43C2}
 		{38F8C4F3-A058-456A-9BE2-1636DDBEF47F} = {AC51144F-4909-4EBD-908B-6DADE45E43C2}
-		{8AB8686A-7A43-4034-AE9B-B174107953E7} = {C9A27BA6-F0B0-4655-BD55-1CC0A7BC16E3}
 		{5CA6C791-46CD-42AF-A2D7-2CCDF06526D4} = {87887A93-EE6F-45B9-B2FC-68D198842FBC}
 	EndGlobalSection
 EndGlobal

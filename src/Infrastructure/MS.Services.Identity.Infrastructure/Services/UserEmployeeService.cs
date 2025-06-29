@@ -27,7 +27,6 @@ public class UserEmployeeService : IUserEmployeeService
     private readonly IIdentityUnitOfWork _identityUnitOfWork;
     private readonly IUserEmployeeRepository _employeeRepository;
     private readonly IEmployeeRoleRepository _employeeRoleRepository;
-    private readonly IEmployeeManagerRepository _employeeManagerRepository;
     private readonly IMapper _mapper;
     private readonly IIdentityEmployeeService _identityEmployeeService;
     private readonly IUserRepository _userRepository;
@@ -37,7 +36,6 @@ public class UserEmployeeService : IUserEmployeeService
         IIdentityUnitOfWork identityUnitOfWork,
         IUserEmployeeRepository employeeRepository,
         IEmployeeRoleRepository employeeRoleRepository,
-        IEmployeeManagerRepository employeeManagerRepository,
         IUserRepository userRepository,
         IOptions<KeycloakOptions> options,
         IIdentityEmployeeService identityEmployeeService)
@@ -46,7 +44,6 @@ public class UserEmployeeService : IUserEmployeeService
         _identityUnitOfWork = identityUnitOfWork;
         _employeeRepository = employeeRepository;
         _employeeRoleRepository = employeeRoleRepository;
-        _employeeManagerRepository = employeeManagerRepository;
         _userRepository = userRepository;
         _keycloakOptions = options.Value;
         _identityEmployeeService = identityEmployeeService;
@@ -184,7 +181,6 @@ public class UserEmployeeService : IUserEmployeeService
         existingUserEmployee.IsDeleted = true;
 
         _employeeRepository.Update(existingUserEmployee);
-        await _employeeManagerRepository.ManagerUpdatesCount(UserId, cancellationToken);
         bool isDeleted = await _identityEmployeeService.DeleteUserAsync(existingUserEmployee.User.IdentityRefId, cancellationToken);
 
         if (!isDeleted)

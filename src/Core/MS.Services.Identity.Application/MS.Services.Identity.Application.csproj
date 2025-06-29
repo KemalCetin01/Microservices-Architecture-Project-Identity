@@ -26,8 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Core\Infrastructure\Services\UserEmployeeManager\" />
+    <Folder Include="Core\Persistence\Repositories\UserEmployeeManagers\" />
     <Folder Include="DTOs\Business\" />
     <Folder Include="Handlers\B2bRoles\Queries\" />
+    <Folder Include="Handlers\UserEmployeeManagers\" />
     <Folder Include="Handlers\UserNotes\" />
   </ItemGroup>
 

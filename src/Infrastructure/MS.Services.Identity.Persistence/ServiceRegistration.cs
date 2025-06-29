@@ -29,6 +29,7 @@ public static class ServiceRegistrations
         serviceCollection.AddScoped<IUserOTPRepository, UserOTPRepository>();
         serviceCollection.AddScoped<IUserResetPasswordRepository, UserResetPasswordRepository>();
         serviceCollection.AddScoped<IUserConfirmRegisterTypeRepository, UserConfirmRegisterTypeRepository>();
+        serviceCollection.AddScoped<IUserB2BRepository, UserB2BRepository>();
 
 
     }
