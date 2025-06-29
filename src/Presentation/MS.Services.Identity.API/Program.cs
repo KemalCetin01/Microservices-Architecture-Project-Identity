@@ -70,7 +70,7 @@ builder.Services.AddBaseHealthChecks();
 
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-//builder.UseSerilogLogging(configuration); //TODO: Serilog Logging altyapý hazýr eklenecek
+//builder.UseSerilogLogging(configuration); //TODO: Serilog Logging altyapÃ½ hazÃ½r eklenecek
 
 builder.Services.AddHttpService<KeycloakBaseService>();
 builder.Services.AddHttpService<KeycloakUserService>();
@@ -87,7 +87,7 @@ builder.Services
         options.SuppressModelStateInvalidFilter = true);
 
 
-//builder.Services.AddLocalizationlayer<IdentityDbContext, IIdentityUnitOfWork>(configuration); //TODO: Localization altyapý hazýr eklenecek
+//builder.Services.AddLocalizationlayer<IdentityDbContext, IIdentityUnitOfWork>(configuration); //TODO: Localization altyapÃ½ hazÃ½r eklenecek
 
 
 
@@ -107,7 +107,7 @@ builder.Services.AddVersionedApiExplorer(setup =>
     setup.SubstituteApiVersionInUrl = true;
 });
 
-// builder.Services.ConfigureOptions<ConfigureSwaggerOptions>(); //TODO: Swagger altyapý hazýr eklenecek Hata verdigi icin commentlendi
+// builder.Services.ConfigureOptions<ConfigureSwaggerOptions>(); //TODO: Swagger altyapÃ½ hazÃ½r eklenecek Hata verdigi icin commentlendi
 
 var app = builder.Build();
 
@@ -130,7 +130,7 @@ if (!app.Environment.IsProduction())
 app.UseRouting();
 app.UseRequestLocalization();
 
-//app.UseBaseHealthChecks();  //TODO: HealthCheck altyapý hazýr eklenecek
+//app.UseBaseHealthChecks();  //TODO: HealthCheck altyapÃ½ hazÃ½r eklenecek
 
 
 app.AddHeaderContextMiddleware();
