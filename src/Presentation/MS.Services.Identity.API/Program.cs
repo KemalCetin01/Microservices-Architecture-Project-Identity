@@ -130,9 +130,6 @@ if (!app.Environment.IsProduction())
 app.UseRouting();
 app.UseRequestLocalization();
 
-//app.UseBaseHealthChecks();  //TODO: HealthCheck altyapý hazýr eklenecek
-
-
 app.AddHeaderContextMiddleware();
 app.AddExceptionHandlingMiddleware(true);
 
